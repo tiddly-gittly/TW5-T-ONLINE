@@ -1,4 +1,4 @@
-name: 将Tiddlywiki部署到Github页面
+name: 部署 Tiddlywiki 静态页面到 Github Pages
 
 on:
   push:
@@ -20,6 +20,7 @@ jobs:
       - uses: actions/setup-node@v3.5.1
         with:
           node-version: '16'
+
       - name: Cache dependencies
         uses: actions/cache@v3
         with:
@@ -27,10 +28,18 @@ jobs:
             **/node_modules
           key: ${{ runner.os }}-${{ hashFiles('**/package.json') }}
           
-      - name: 安装依赖
+      - name: 安装 NodeJS 依赖
         run: npm install
-      - name: 运行构建
-        run: npm run build
+        
+      # - name: 运行zx构建
+      #   run: npm run zx-build
+
+      - name: 构建在线版本网页
+        run: npm run buildonline
+      - name: 构建可下载离线版本的网页
+        run: npm run buildoffline
+      - name: Workbox 离线缓存
+        run: npx workbox injectManifest workbox-config.js
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1.0.7

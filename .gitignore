@@ -3,11 +3,22 @@ node_modules
 output
 public-dist
 $__StoryList.tid
+StoryList.tid
 settings/settings.json
 tiddlers/subwiki/
 
 # ignore some change from plugin that will only change "modified" field
-$__keepstate_utility_toggle-view-fields.tid
+$__keepstate_*
 tiddlers/$__Import.tid
 tiddlers/$__layout.json
 tiddlers/$__layout.json.meta
+
+$__Import.tid
+Import.tid
+$__plugins_felixhayashi_tiddlymap_misc_defaultViewHolder.tid
+$__themes_tiddlywiki_vanilla_metrics_sidebarwidth.tid
+$__view.tid
+Have fun with.tid
+TiddlyMap!!.tid
+$__config_Navigation_openLinkFromInsideRiver.tid
+$__config_Navigation_openLinkFromOutsideRiver.tid
