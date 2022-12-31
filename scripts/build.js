@@ -60,8 +60,6 @@ function buildOnlineHTML(distDir, htmlName, minify, excludeFilter) {
     // 静态资源拷贝
     shellI(`cp -r public/ ${distDir} &> /dev/null`);
     shellI(`cp tiddlers/favicon.ico ${distDir}/favicon.ico &> /dev/null`);
-    shellI(`cp tiddlers/TiddlyWikiIconWhite.png ${distDir}/TiddlyWikiIconWhite.png &> /dev/null`);
-    shellI(`cp tiddlers/TiddlyWikiIconBlack.png ${distDir}/TiddlyWikiIconBlack.png &> /dev/null`);
     shellI(`cp vercel.json ${distDir}/vercel.json &> /dev/null`);
 
     // 构建HTML
