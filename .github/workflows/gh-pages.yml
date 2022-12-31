@@ -1,4 +1,4 @@
-name: Deploy Tiddlywiki To Github Pages
+name: 将Tiddlywiki部署到Github页面
 
 on:
   push:
@@ -17,26 +17,26 @@ jobs:
     runs-on: ubuntu-18.04
     steps:
       - uses: actions/checkout@v3
-      - uses: actions/setup-node@v2-beta
+      - uses: actions/setup-node@v3.5.1
         with:
           node-version: '16'
 
-      - name: Cache dependencies
+      - name: 缓存依赖
         uses: actions/cache@v3
         with:
           path: |
             **/node_modules
           key: ${{ runner.os }}-${{ hashFiles('**/package.json') }}
-      - name: Install Dependency
+      - name: 安装依赖
         run: npm install
-      - name: Build
+      - name: 运行构建
         run: npm run build
 
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
+      - name: 上传Artifact
+        uses: actions/upload-pages-artifact@v1.0.7
         with:
           # Upload entire repository
           path: ./public-dist
-      - name: Deploy to GitHub Pages
+      - name: 部署到GitHub页面
         id: deployment
-        uses: actions/deploy-pages@v1
+        uses: actions/deploy-pages@v1.2.3
