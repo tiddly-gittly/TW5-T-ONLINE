@@ -5,6 +5,10 @@ on:
     branches:
       - main
       - master
+    paths:
+      - "plugins/**"
+      - "tiddlers/**"
+      - "package.json"
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
