@@ -1,5 +1,7 @@
 # TW5-T-G-O
 
+tiddlywiki deploy GitHub pages
+
 可修改的配置文件：build-wiki.mjs、build.js、package.json、gh-pages.yml。  tiddlywiki.info、.gitignore
 
 两种构建方式：
