@@ -8,7 +8,7 @@ tiddlywiki deploy GitHub pages
 1. zx：build-wiki.mjs
 2. js：build.js
 
-仅当添加修改条目、插件以及package.json文件时更新GitHub Pages。
+仅当添加修改条目、插件以及package.json文件时更新GitHub Pages。所以以该仓库为模板创建仓库后想要看到效果就要往tiddlers目录随便丢一个文件以便触发actions生成静态页面。
 
 使用NodeJS版TiddlyWiki的`HTML转文件夹`命令转换单文件wiki后，覆盖tiddlers，plugins文件夹
 
