@@ -13,6 +13,8 @@ tiddlywiki deploy GitHub pages
 使用NodeJS版TiddlyWiki的`HTML转文件夹`命令转换单文件wiki后，覆盖tiddlers，plugins文件夹
 
 设置GitHub pages，点击页面上面离code按钮最右边的settings按钮找到pages选项卡。然后找到Build and deployment的Source设置为Actions。
+![image](https://user-images.githubusercontent.com/32425955/211513957-2e679998-6035-4904-9c0e-58fab7963b05.png)
+
 
 设置显示图片：tiddlers/`$:/GitHub/Repo` 条目内容修改为：Zacharia2(用户名)/TW5-T-ONLINE(现在使用的WIKI仓库)
 
