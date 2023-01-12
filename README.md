@@ -6,11 +6,11 @@ tiddlywiki deploy GitHub pages
 
 两种构建方式：
 1. zx：build-wiki.mjs
-2. js：build.js
+2. js：build.js（默认）
 
-仅当添加修改条目、插件以及package.json文件时更新GitHub Pages。
+仅当添加修改条目、插件以及package.json文件时触发actions更新GitHub Pages。
 
-使用NodeJS版TiddlyWiki的`HTML转文件夹`命令转换单文件wiki后，覆盖tiddlers，plugins文件夹
+使用NodeJS版TiddlyWiki的`HTML转文件夹`命令生成wiki文件夹后，覆盖tiddlers，plugins文件夹
 
 设置GitHub pages，点击仓库设置（页面上面code按钮最右边的settings按钮），然后点击pages。然后找到Build and deployment的Source设置为Actions。
 ![image](https://user-images.githubusercontent.com/32425955/211513957-2e679998-6035-4904-9c0e-58fab7963b05.png)
