@@ -4,6 +4,8 @@ tiddlywiki deploy GitHub pages
 
 此仓库模仿太微中文和太记知识模板，是为了快速在github上部署静态tiddlywiki页面。
 
+效果预览链接：https://tiddly-gittly.github.io/TW5-T-ONLINE/
+
 ## 使用
 1. 点击`Use this template`创建属于你的仓库。
 2. 克隆你的仓库到本地。
@@ -17,12 +19,12 @@ tiddlywiki deploy GitHub pages
 7. 等待actions执行完成。你可以在（setting）仓库设置-Pages中找到生成的链接
 
 ## 维护
-可修改的配置文件：build-wiki.mjs、build.js、package.json、gh-pages.yml。  tiddlywiki.info、.gitignore
+可修改的配置文件：build-wiki.mjs、build.js、package.json、gh-pages.yml、tiddlywiki.info、.gitignore
 
 两种构建方式：
 1. zx：build-wiki.mjs
-2. js：build.js（默认）
+2. js：build.js（默认构建方式）
 
 （已关闭此功能）仅当添加修改条目、插件以及package.json文件时触发actions更新GitHub Pages。
 
-其它：https://raw.githubusercontent.com/用户名/仓库/分支/路径/文件名.后缀
+其它：`https://raw.githubusercontent.com/用户名/仓库/分支/路径/文件名.后缀`
