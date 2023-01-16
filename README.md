@@ -9,7 +9,7 @@ tiddlywiki deploy GitHub pages
 ## 使用
 1. 点击`Use this template`创建属于你的仓库。
 2. 克隆你的仓库到本地。
-3. 使用已有的文件夹wiki中的数据覆盖克隆后的tiddlers，plugins文件夹。
+3. 使用已有的文件夹wiki中的数据（tiddlers与plugins文件夹）覆盖克隆后的tiddlers，plugins文件夹。
     1. 用TidGi转换HTMLWiki，找到转换后的wiki文件夹。
     2. 使用NodeJS版TiddlyWiki的`HTML转文件夹`命令生成wiki文件夹。
 4. 设置图片显示：找到条目：tiddlers/`$:/GitHub/Repo` ，条目内容修改为：Zacharia2(用户名)/TW5-T-ONLINE(现在使用的WIKI仓库)
