@@ -52,4 +52,4 @@ jobs:
           path: ./public-dist
       - name: 部署到GitHub页面
         id: deployment
-        uses: actions/deploy-pages@v1.2.5
+        uses: actions/deploy-pages@v1.2.7
