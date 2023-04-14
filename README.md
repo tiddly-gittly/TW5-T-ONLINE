@@ -16,14 +16,26 @@ tiddlywiki deploy GitHub pages
 5. 提交更改并推送到github仓库
 6. 设置GitHub pages，点击仓库设置（页面上面code按钮最右边的settings按钮），然后点击pages。然后找到Build and deployment的Source设置为Actions。
 ![image](https://user-images.githubusercontent.com/32425955/211513957-2e679998-6035-4904-9c0e-58fab7963b05.png)
-7. 等待actions执行完成。你可以在（setting）仓库设置-Pages中找到生成的链接
+1. 等待actions执行完成。你可以在（setting）仓库设置-Pages中找到生成的链接
 
 ## 维护
-可修改的配置文件：build-wiki.mjs、build.js、package.json、gh-pages.yml、tiddlywiki.info、.gitignore
+> 可修改的配置文件：build-wiki.mjs、build.js、package.json、deploy.yaml、tiddlywiki.info、.gitignore、service-worker.js  
 
 两种构建方式：
-1. zx：build-wiki.mjs
-2. js：build.js（默认构建方式）
+1. js：scripts\build.js（默认构建方式）
+2. zx：scripts\build-wiki.mjs
+
+### 配置文件
+
+| 配置文件                                 | 描述                                   |
+| ---------------------------------------- | -------------------------------------- |
+| package.json                             | 项目或模块描述文件                     |
+| tiddlywiki.info                          | TiddlyWiki 的配置文件                  |
+| .github\workflows\deploy.yaml            | Github-Action配置文件                  |
+| .gitignore                               | Git指定忽略项的配置文件                |
+| public\service-worker.js                 | 缓存策略配置文件                       |
+| tiddlers\$__GitHub_Repo.tid              | Github仓库资源与图像的仓库路径配置文件 |
+| scripts\html-minifier-terser.config.json | HTML 缩小器配置文件                    |
 
 （已关闭此功能）仅当添加修改条目、插件以及package.json文件时触发actions更新GitHub Pages。
 
