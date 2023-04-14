@@ -1,6 +1,9 @@
 {
   "description": "TW5-T-ONLINE",
-  "plugins": [],
+  "plugins": [
+    "tiddlywiki/filesystem",
+    "tiddlywiki/tiddlyweb"
+  ],
   "themes": [
     "tiddlywiki/vanilla"
   ],
