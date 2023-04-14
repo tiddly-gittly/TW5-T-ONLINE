@@ -6,6 +6,8 @@ tiddlywiki deploy GitHub pages
 
 效果预览链接：https://tiddly-gittly.github.io/TW5-T-ONLINE/
 
+离线网页链接：https://tiddly-gittly.github.io/TW5-T-ONLINE/offline.html (仅需在链接末尾加上offline.html即可访问可离线使用的TW。)
+
 ## 开始使用
 1. 点击`Use this template`创建属于你的仓库。
 2. 克隆你的仓库到本地。
