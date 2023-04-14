@@ -23,7 +23,7 @@ tiddlywiki deploy GitHub pages
     3. 直接使用TidGi创建。
 
 
-**注意：** 在 v0.7.15-prerelease 太记 版本中，导入Wiki.HTML功能可以完美转换，其原理是使用NodeJS-TW的`savewikifolder`命令，但由于太记对于插件的升级策略（[参见 issue #324](https://github.com/tiddly-gittly/TidGi-Desktop/issues/324)）与现有转换后的插件升级策略不一致，所以太记暂时不支持`使用导入Wiki.HTML功能`后的Wiki的插件升级。如果要升级可以有两种选项，使用NodeJS启动TW进行升级，另一种是使用quicker脚本批量移动插件以适配太记的插件升级策略后使用太记升级。
+**注意：** 在 v0.7.15-prerelease 太记 版本中，导入Wiki.HTML功能可以完美转换，其原理是使用NodeJS-TW的`savewikifolder`命令，但由于太记对于插件的升级策略（[参见 issue #324](https://github.com/tiddly-gittly/TidGi-Desktop/issues/324)）与现有的NodeJS-TW插件升级策略不一致，所以太记暂时不支持`使用导入Wiki.HTML功能`后的Wiki的插件升级。如果要升级可以有两种选项，使用NodeJS启动TW进行升级，另一种是使用quicker脚本批量移动插件以适配太记的插件升级策略后使用太记升级。
 
 ## 介绍配置文件
 
