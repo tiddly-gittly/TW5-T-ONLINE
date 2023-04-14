@@ -2,9 +2,14 @@
 
 tiddlywiki deploy GitHub pages
 
-此仓库模仿太微中文和太记知识模板，是为了快速在github上部署静态tiddlywiki页面。仅需几步：一、放置tw数据，二、配置必要设置、三、启用action。然后就可以正常使用了。
+> 此仓库模仿太微中文和太记知识模板，是为了快速在github上部署静态tiddlywiki页面。
 
-效果预览链接：https://tiddly-gittly.github.io/TW5-T-ONLINE/
+仅需三步：一、放置tw数据，二、配置必要设置、三、启用action。然后就可以正常使用了。
+
+- 效果预览链接：https://tiddly-gittly.github.io/TW5-T-ONLINE/
+- 可离线版本链接：https://tiddly-gittly.github.io/TW5-T-ONLINE/offline.html 
+
+> 仅需在你的TiddlyWiki链接末尾加上offline.html即可访问可离线使用的TW。如上可离线版本链接示例所示。
 
 ## 开始使用
 1. 点击`Use this template`创建属于你的仓库。
@@ -36,6 +41,8 @@ tiddlywiki deploy GitHub pages
 | public\service-worker.js                 | 缓存策略配置文件                       |
 | tiddlers\$__GitHub_Repo.tid              | Github仓库资源与图像的仓库路径配置文件 |
 | scripts\html-minifier-terser.config.json | HTML 缩小器配置文件                    |
+| scripts\build.js                         | js                                     |
+| scripts\build-wiki.mjs                   | zx                                     |
 
 
 ## 维护说明与记录
@@ -47,5 +54,6 @@ tiddlywiki deploy GitHub pages
 2. zx：scripts\build-wiki.mjs
 
 > （已关闭此功能）仅当添加修改条目、插件以及package.json文件时触发actions更新GitHub Pages。
+> 
 > （已启用此功能）缓存策略 public\service-worker.js 配置中 index.html 的 NetworkFirst（网络优先）策略。
 
