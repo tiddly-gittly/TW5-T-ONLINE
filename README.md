@@ -2,11 +2,14 @@
 
 tiddlywiki deploy GitHub pages
 
-此仓库模仿太微中文和太记知识模板，是为了快速在github上部署静态tiddlywiki页面。仅需几步：一、放置tw数据，二、配置必要设置、三、启用action。然后就可以正常使用了。
+> 此仓库模仿太微中文和太记知识模板，是为了快速在github上部署静态tiddlywiki页面。
 
-效果预览链接：https://tiddly-gittly.github.io/TW5-T-ONLINE/
+仅需几步：一、放置tw数据，二、配置必要设置、三、启用action。然后就可以正常使用了。
 
-离线网页链接：https://tiddly-gittly.github.io/TW5-T-ONLINE/offline.html (仅需在链接末尾加上offline.html即可访问可离线使用的TW。)
+- 效果预览链接：https://tiddly-gittly.github.io/TW5-T-ONLINE/
+- 可离线版本链接：https://tiddly-gittly.github.io/TW5-T-ONLINE/offline.html 
+
+> 仅需在你的TiddlyWiki链接末尾加上offline.html即可访问可离线使用的TW。如上可离线版本链接示例所示。
 
 ## 开始使用
 1. 点击`Use this template`创建属于你的仓库。
