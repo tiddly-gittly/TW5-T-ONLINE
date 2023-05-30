@@ -10,7 +10,7 @@
     "cross-env": "7.0.3",
     "tiddlywiki": "5.2.7",
     "uglify-js": "3.17.4",
-    "workbox-cli": "6.6.0",
+    "workbox-cli": "6.6.1",
     
     "shx": "0.3.4",
     "zx": "^7.0.0",
