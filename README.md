@@ -55,5 +55,5 @@ tiddlywiki deploy GitHub pages
 
 > （已关闭此功能）仅当添加修改条目、插件以及package.json文件时触发actions更新GitHub Pages。
 > 
-> （已启用此功能）缓存策略 public\service-worker.js 配置中 index.html 的 NetworkFirst（网络优先）策略。
+> （已启用此功能）缓存策略 public\service-worker.js 配置中 index.html 的 StaleWhileRevalidate 策略。
 
