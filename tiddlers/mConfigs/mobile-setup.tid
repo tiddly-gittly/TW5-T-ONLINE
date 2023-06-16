@@ -1,0 +1,12 @@
+created: 20230616092522912
+creator: WhiteFall
+modified: 20230616092614805
+modifier: WhiteFall
+tags: $:/tags/StartupAction
+title: mobile-setup
+type: text/vnd.tiddlywiki
+
+<$list filter="[[$:/info/browser/is/mobile]get[text]else[no]match[yes]]"> 
+<$action-setfield $tiddler="$:/themes/tiddlywiki/vanilla/options/stickytitles" text="no"/>
+<$action-setfield $tiddler="$:/state/sidebar" text="no"/>
+</$list>
