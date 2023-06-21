@@ -2,7 +2,8 @@
   "description": "TW5-T-ONLINE",
   "plugins": [
     "tiddlywiki/filesystem",
-    "tiddlywiki/tiddlyweb"
+    "tiddlywiki/tiddlyweb",
+    "tiddlywiki/browser-sniff"
   ],
   "themes": [
     "tiddlywiki/vanilla"
