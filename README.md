@@ -23,12 +23,9 @@ tiddlywiki deploy GitHub pages
 
 
 - HTML-Wiki转Folder-Wiki的方法：
-    1. 用TidGi转换HTMLWiki，找到转换后的wiki文件夹。
-    2. 使用NodeJS版TiddlyWiki的`HTML转文件夹`命令生成wiki文件夹。
-    3. 直接使用TidGi创建。
+    1. 用TidGi导入WIKI.HTML功能转换HTMLWiki，找到转换后的wiki文件夹（仅适用于TidGi > v0.8.0版本）。
+    2. 使用NodeJS版tiddlywiki，输入`tiddlywiki --load ./mywiki.html --savewikifolder ./mywikifolder explodePlugins=no`命令转换。
 
-
-**注意：** 在 v0.7.15-prerelease 太记 版本中，导入Wiki.HTML功能可以完美转换，其原理是使用NodeJS-TW的`savewikifolder`命令，但由于太记对于插件的升级策略（[参见 issue #324](https://github.com/tiddly-gittly/TidGi-Desktop/issues/324)）与现有的NodeJS-TW插件升级策略不一致，所以太记暂时不支持`使用导入Wiki.HTML功能`后的Wiki的插件升级。如果要升级可以有两种选项，使用NodeJS启动TW进行升级，另一种是使用quicker脚本批量移动插件以适配太记的插件升级策略后使用太记升级。
 
 ## 介绍配置文件
 
