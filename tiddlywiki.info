@@ -12,7 +12,7 @@
   "build": {
     "index": [
       "--rendertiddler",
-      "$:/plugins/tiddlywiki/tiddlyweb/save/offline",
+      "$:/core/save/all",
       "index.html",
       "text/plain"
     ],
