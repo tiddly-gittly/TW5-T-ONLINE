@@ -23,6 +23,10 @@
     "externaltext": [
       "--setfield","[!is[system]!is[image]!is[binary]!is[draft]!is[blank]!is[shadow]!is[missing]]","_canonical_uri","$:/core/templates/canonical-uri-external-text","text/plain",
       "--setfield","[!is[system]!is[image]!is[binary]!is[draft]!is[blank]!is[shadow]!is[missing]]","text","","text/plain"
+    ],
+    "externalplugin": [
+      "--setfield","[field:plugin-type[plugin]] +[field:type[application/json]] -[[$:/core]]","_canonical_uri","$:/core/templates/canonical-uri-external-text","text/plain",
+      "--setfield","[field:plugin-type[plugin]] +[field:type[application/json]] -[[$:/core]]","text","","text/plain"
     ]
   },
   "config": {
