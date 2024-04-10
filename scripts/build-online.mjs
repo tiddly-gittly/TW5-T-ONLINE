@@ -37,12 +37,19 @@ await $`cp -r public/ ${distDir} &> /dev/null`;
 await $`cp tiddlers/favicon.ico ${distDir}/favicon.ico &> /dev/null`;
 await $`cp vercel.json ${distDir}/vercel.json &> /dev/null`;
 
+// 备份
+await $`cp -r tiddlers/ backup &> /dev/null`;
+
 // 构建HTML
 await $`npx tiddlywiki . \\
     --output ${distDir} \\
     --build deletetiddlers externalimages externaltext externaljs \\
     --render $:/core/save/offline-external-js index-raw.html text/plain "" publishFilter ${excludeFilter} \\
 `;
+
+// 恢复
+await $`rm -rf ${repoFolder}/tiddlers &> /dev/null`;
+await $`mv ${repoFolder}/backup ${repoFolder}/tiddlers &> /dev/null`; 
 
 // 最小化：核心JS和HTML
 // 最小化：核心JS和HTML
