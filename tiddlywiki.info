@@ -10,33 +10,19 @@
     "zh-Hans"
   ],
   "build": {
-    "index": [
-      "--rendertiddler",
-      "$:/core/save/all",
-      "index.html",
-      "text/plain"
-    ],
-    "externalimages": [
-      "--setfield",
-      "[is[binary]] [type[application/msword]]",
-      "_canonical_uri",
-      "$:/core/templates/canonical-uri-external-image",
-      "text/plain",
-      "--setfield",
-      "[is[binary]] [type[application/msword]]",
-      "text",
-      "",
-      "text/plain",
-      "--rendertiddler",
-      "$:/core/save/all-external-js",
-      "index.html",
-      "text/plain"
+    "deletetiddlers": [
+      "--deletetiddlers","[[$:/UpgradeLibrary]] [[$:/UpgradeLibrary/List]]"
     ],
     "externaljs": [
-      "--rendertiddler",
-      "$:/core/templates/tiddlywiki5.js",
-      "tiddlywiki5.js",
-      "text/plain"
+      "--rendertiddler","$:/core/templates/tiddlywiki5.js","tiddlywikicore.js","text/plain"
+    ],
+    "externalimages": [
+      "--setfield","[is[image]] [is[binary]] [type[application/msword]] [type[image/svg+xml]]","_canonical_uri","$:/core/templates/canonical-uri-external-image","text/plain",
+      "--setfield","[is[image]] [is[binary]] [type[application/msword]] [type[image/svg+xml]]","text","","text/plain"
+    ],
+    "externaltext": [
+      "--setfield","[!is[system]!is[image]!is[binary]!is[draft]!is[blank]!is[shadow]!is[missing]]","_canonical_uri","$:/core/templates/canonical-uri-external-text","text/plain",
+      "--setfield","[!is[system]!is[image]!is[binary]!is[draft]!is[blank]!is[shadow]!is[missing]]","text","","text/plain"
     ]
   },
   "config": {

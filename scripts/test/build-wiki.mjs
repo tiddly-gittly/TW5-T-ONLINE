@@ -1,30 +1,28 @@
-import { fs } from 'zx';
-import path from 'path';
+import { fs } from "zx";
+import path from "path";
 
-const repoFolder = path.join(path.dirname(__filename), '..');
-const folderToServe = path.join(repoFolder, 'public-dist');
+const repoFolder = path.join(path.dirname(__filename), "..");
+const folderToServe = path.join(repoFolder, "public-dist");
 
 // cross-env TIDDLYWIKI_PLUGIN_PATH='node_modules/tiddlywiki/plugins/published' TIDDLYWIKI_THEME_PATH='${wikiFolderName}/themes'
 process.env.TIDDLYWIKI_PLUGIN_PATH = `${repoFolder}/plugins`;
 process.env.TIDDLYWIKI_THEME_PATH = `${repoFolder}/themes`;
 
-// npm run build:prepare
-await $`rm -rf ${folderToServe}`;
-// npm run build:public
-await $`cp -r ${repoFolder}/public/ ${folderToServe}`;
+
 try {
+  await $`rm -rf ${folderToServe}`;
+  await $`cp -r ${repoFolder}/public/ ${folderToServe}`;
   await $`cp ${repoFolder}/vercel.json ${folderToServe}/vercel.json`;
 } catch (error) {
   console.log(error);
 }
 // try copy some static assets, don't cause error if some of them been removed by the user
 try {
-  // npm run build:public
   await $`cp ${repoFolder}/tiddlers/favicon.ico ${folderToServe}/favicon.ico`;
 } catch (error) {
   console.log(error);
 }
-// npm run build:nodejs2html
+
 // exclude edit related plugins, make it readonly, and reduce size
 await $`tiddlywiki ${repoFolder} --build readonlyexternalimages`;
 await $`tiddlywiki ${repoFolder} --build externaljs`;
@@ -35,8 +33,11 @@ const htmlOutputPath = `${folderToServe}/index.html`;
 await $`html-minifier-terser -c ./scripts/html-minifier-terser.config.json -o ${htmlMinifyPath} ${repoFolder}/output/index.html`;
 // build dll.js and config tw to load it
 // original filename contains invalid char, will cause static server unable to load it
-const htmlContent = fs.readFileSync(htmlMinifyPath, 'utf-8');
-const htmlContentWithCorrectJsPath = htmlContent.replaceAll('%24%3A%2Fcore%2Ftemplates%2Ftiddlywiki5.js', 'tiddlywiki5.js');
+const htmlContent = fs.readFileSync(htmlMinifyPath, "utf-8");
+const htmlContentWithCorrectJsPath = htmlContent.replaceAll(
+  "%24%3A%2Fcore%2Ftemplates%2Ftiddlywiki5.js",
+  "tiddlywiki5.js"
+);
 fs.writeFileSync(htmlOutputPath, htmlContentWithCorrectJsPath);
 await $`mv ${repoFolder}/output/tiddlywiki5.js ${folderToServe}/tiddlywiki5.js`;
 // npm run build:precache

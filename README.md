@@ -54,3 +54,8 @@ tiddlywiki deploy GitHub pages
 > 
 > （已启用此功能）缓存策略 public\service-worker.js 配置中 index.html 的 StaleWhileRevalidate 策略。
 
+## 其它
+
+Shx 是一个包装 ShellJS Unix 命令的包装器，为 npm 包脚本中简单的类 Unix 跨平台命令提供了一个简单的解决方案
+
+Google的zx库 可以帮助我们更加高效地用Nodejs写shell 脚本。
