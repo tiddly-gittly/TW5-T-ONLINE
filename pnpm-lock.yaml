@@ -22,7 +22,7 @@ dependencies:
     version: 0.3.4
   tiddlywiki:
     specifier: ^5.3.3
-    version: 5.3.3
+    version: 5.4.1
   uglify-js:
     specifier: ^3.17.4
     version: 3.17.4
@@ -1372,7 +1372,7 @@ packages:
     requiresBuild: true
     dependencies:
       '@types/jsonfile': 6.1.4
-      '@types/node': 20.12.6
+      '@types/node': 22.20.2
     dev: false
     optional: true
 
@@ -1380,7 +1380,7 @@ packages:
     resolution: {integrity: sha512-D5qGUYwjvnNNextdU59/+fI+spnwtTFmyQP0h+PfIOSkNfpU6AOICUOkm4i0OnSk+NyjdPJrxCDro0sJsWlRpQ==}
     requiresBuild: true
     dependencies:
-      '@types/node': 20.12.6
+      '@types/node': 22.20.2
     dev: false
     optional: true
 
@@ -1399,6 +1399,14 @@ packages:
     dependencies:
       undici-types: 5.26.5
     dev: false
+
+  /@types/node@22.20.2:
+    resolution: {integrity: sha512-xlvWf4Vs9n1PEVYwP1n4vvG07M6y8WgvJ2t0vbrWTmijsIHp1cS+uJ2kMIRdY3nHZK0nCYKrPeD171+SzF4/zw==}
+    requiresBuild: true
+    dependencies:
+      undici-types: 6.21.0
+    dev: false
+    optional: true
 
   /@types/normalize-package-data@2.4.4:
     resolution: {integrity: sha512-37i+OaWTh9qeK4LSHPsyRC7NahnGotNuZvjLSgcPzblpHB3rrCJxAOgI5gCdKm7coonsaX1Of0ILiTcnZjbfxA==}
@@ -3742,9 +3750,9 @@ packages:
     resolution: {integrity: sha512-w89qg7PI8wAdvX60bMDP+bFoD5Dvhm9oLheFp5O4a2QF0cSBGsBX4qZmadPMvVqlLJBBci+WqGGOAPvcDeNSVg==}
     dev: false
 
-  /tiddlywiki@5.3.3:
-    resolution: {integrity: sha512-PkgVfZNpFFHyMmfFw91igXOJn8Z7IWg3NGXOX5EBqJwzGNeYYOIUg4FqCNsWoqBece20HxtkDue/vTf2jDtdZQ==}
-    engines: {node: '>=0.8.2'}
+  /tiddlywiki@5.4.1:
+    resolution: {integrity: sha512-5Pnk7j8cUMoQHD0CarOWd4ixITURsN4DJxLfg8AGYSMiQoOHH6bp8JDCAgSdvZHRCQmvXtbm5FRxBFBT6WG24A==}
+    engines: {node: '>=20.0.0'}
     hasBin: true
     dev: false
 
@@ -3885,6 +3893,12 @@ packages:
     resolution: {integrity: sha512-JlCMO+ehdEIKqlFxk6IfVoAUVmgz7cU7zD/h9XZ0qzeosSHmUJVOzSQvvYSYWXkFXC+IfLKSIffhv0sVZup6pA==}
     requiresBuild: true
     dev: false
+
+  /undici-types@6.21.0:
+    resolution: {integrity: sha512-iwDZqg0QAGrg9Rav5H4n0M64c3mkR59cJ6wQp+7C4nI0gsmExaedaYLNO44eT4AtBBwjbTiGPMlt2Md0T9H9JQ==}
+    requiresBuild: true
+    dev: false
+    optional: true
 
   /unicode-canonical-property-names-ecmascript@2.0.0:
     resolution: {integrity: sha512-yY5PpDlfVIU5+y/BSCxAJRBIS1Zc2dDG3Ujq+sR0U+JjUevW2JhocOF+soROYDSaAezOzOKuyyixhD6mBknSmQ==}
@@ -4257,5 +4271,5 @@ packages:
     hasBin: true
     optionalDependencies:
       '@types/fs-extra': 11.0.4
-      '@types/node': 20.12.6
+      '@types/node': 22.20.2
     dev: false
